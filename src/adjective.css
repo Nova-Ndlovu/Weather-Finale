@@ -132,7 +132,7 @@ main {
   position: relative;
   font-size: 22px;
   margin: 0 auto;
-  top: -42px;
+  top: -32px;
 }
 
 .midnightArcade .weather-app .present-city {
@@ -144,7 +144,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  bottom: 42px;
+  bottom: 32px;
 }
 
 .weather-app .changeTheme {
