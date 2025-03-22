@@ -108,11 +108,6 @@ function midnightArcadeTheme() {
   body.classList.toggle("midnightArcade");
 }
 
-function vanillaLatteTheme() {
-  let body = document.querySelector("body");
-  body.classList.remove("midnightArcade");
-}
-
 let searchFormElement = document.querySelector("#city-search");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
@@ -121,6 +116,3 @@ button.addEventListener("click", revealMenu);
 
 button = document.querySelector("#midnight-arcade");
 button.addEventListener("click", midnightArcadeTheme);
-
-button = document.querySelector("#vanilla-latte");
-button.addEventListener("click", vanillaLatteTheme);
