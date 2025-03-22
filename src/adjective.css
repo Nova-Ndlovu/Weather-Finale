@@ -53,68 +53,11 @@ header {
   padding-bottom: 0;
 }
 
-.weather-app .theme-container {
-  display: flex;
-  justify-content: baseline;
-  margin-left: 25px;
-}
-
-.weather-app .theme {
-  background-color: rgb(140, 76, 36);
-  color: rgb(242, 209, 150);
-  position: relative;
-  border: 3px solid rgba(242, 209, 150);
-  box-shadow: 0 0 1px rgb(231, 167, 54) inset, 0 0 3px rgb(56, 30, 14);
-  border-radius: 180px;
-  margin-right: 8px;
-  width: 19px;
-  height: 19px;
-  font-size: 18px;
-  text-align: center;
-  transition: all 300ms ease-in-out;
-}
-
-.theme:hover {
-  box-shadow: 0 0 20px rgba(231, 167, 54);
-  cursor: pointer;
-}
-
-.theme:hover + .theme-hover-display {
-  display: block;
-  color: rgb(140, 76, 36);
-  font-size: 20px;
-  text-shadow: 0 0 6px rgba(231, 167, 54);
-}
-
-.theme-hover-display {
-  display: none;
-  position: absolute;
-  justify-content: center;
-  top: 160px;
-  z-index: 1;
-}
-
-.midnightArcade .weather-app .theme {
-  background-color: rgb(177, 218, 255);
-  color: rgb(0, 0, 0);
-  border: 3px solid rgba(255, 249, 177);
-  box-shadow: 0 0 1px rgb(251, 220, 23) inset, 0 0 3px rgb(62, 146, 69);
-}
-
-.midnightArcade .theme:hover {
-  box-shadow: 0 0 20px rgba(220, 255, 177);
-}
-
-.midnightArcade .theme:hover + .theme-hover-display {
-  color: rgb(241, 241, 241);
-  text-shadow: 0 0 6px rgba(242, 160, 35);
-}
-
 .weather-app .city-search-input {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  padding: 15px;
+  padding: 15px 160px;
   background-color: rgb(242, 209, 150);
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -215,7 +158,7 @@ main {
   border-radius: 180px;
   width: 32px;
   height: 32px;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   transition: all 400ms ease-in-out;
 }
@@ -239,6 +182,25 @@ main {
   left: 5px;
   top: -45px;
   z-index: 1;
+}
+
+.midnightArcade .weather-app .changeTheme {
+  background-color: rgb(192, 26, 129);
+  border: 7px solid rgb(255, 220, 177);
+  box-shadow: 0 0 1px rgb(242, 160, 35) inset, 0 0 10px rgb(62, 146, 69);
+}
+
+.midnightArcade .changeTheme:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(62, 146, 69);
+}
+
+.midnightArcade .changeTheme:hover + .hover-display {
+  color: rgb(240, 239, 239);
+  text-shadow: 0 0 6px rgb(242, 160, 35);
 }
 
 .midnightArcade .weather-app .forecast {
@@ -329,6 +291,7 @@ main {
   bottom: 25px;
   font-size: 20px;
   transition: all 350ms ease-in-out;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -550,10 +513,7 @@ main {
 .forecast-display-discs {
   display: contents;
   position: relative;
-  background-image: radial-gradient(
-    rgb(255, 255, 255) 0%,
-    rgba(242, 209, 150) 100%
-  );
+  background: transparent;
   border: 7px solid rgb(242, 209, 150);
   box-shadow: 0 0 5px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
   border-radius: 180px;
@@ -565,10 +525,7 @@ main {
 }
 
 .forecast-display-discs:hover {
-  background-image: radial-gradient(
-    rgb(231, 167, 54, 0.1) 0%,
-    rgb(255, 255, 255) 100%
-  );
+  background: transparent;
   box-shadow: 0 0 20px rgba(231, 167, 54);
   cursor: pointer;
 }
