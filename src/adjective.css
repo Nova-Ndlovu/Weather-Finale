@@ -1,0 +1,650 @@
+body {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(232, 173, 89) 0%,
+    rgb(240, 204, 151, 0) 100%
+  );
+  color: rgb(140, 76, 36);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.midnightArcade {
+  background-image: linear-gradient(
+    137.9deg,
+    rgb(177, 218, 255) 7.8%,
+    rgb(220, 255, 177) 16%,
+    rgb(255, 249, 177) 32.7%,
+    rgb(255, 220, 177) 50.4%,
+    rgb(255, 187, 187) 71.5%,
+    rgb(222, 177, 255) 83.1%
+  );
+  color: rgb(0, 0, 0);
+  font-family: raleway-dots-regular;
+}
+
+.weather-app {
+  background-color: rgb(255, 255, 255);
+  background-size: contain;
+  display: block;
+  justify-content: center;
+  border-top-color: rgb(231, 188, 161);
+  border: 12px solid rgb(255, 255, 255);
+  border-radius: 180px;
+  max-width: 675px;
+  max-height: 265px;
+  margin: 60px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px 10px rgba(231, 167, 54, 0.8) inset,
+    0 0 20px rgb(56, 30, 14);
+  z-index: 1;
+}
+
+.midnightArcade .weather-app {
+  background-color: rgb(230, 230, 230);
+  border: 12px solid rgb(230, 230, 230);
+  box-shadow: 0 0 10px 8px rgba(220, 255, 177) inset,
+    0 8px 30px rgba(251, 220, 23);
+}
+
+header {
+  padding: 5px 0;
+  padding-bottom: 0;
+}
+
+.weather-app .theme-container {
+  display: flex;
+  justify-content: baseline;
+  margin-left: 25px;
+}
+
+.weather-app .theme {
+  background-color: rgb(140, 76, 36);
+  color: rgb(242, 209, 150);
+  position: relative;
+  border: 3px solid rgba(242, 209, 150);
+  box-shadow: 0 0 1px rgb(231, 167, 54) inset, 0 0 3px rgb(56, 30, 14);
+  border-radius: 180px;
+  margin-right: 8px;
+  width: 19px;
+  height: 19px;
+  font-size: 18px;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.theme:hover {
+  box-shadow: 0 0 20px rgba(231, 167, 54);
+  cursor: pointer;
+}
+
+.theme:hover + .theme-hover-display {
+  display: block;
+  color: rgb(140, 76, 36);
+  font-size: 20px;
+  text-shadow: 0 0 6px rgba(231, 167, 54);
+}
+
+.theme-hover-display {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  top: 160px;
+  z-index: 1;
+}
+
+.midnightArcade .weather-app .theme {
+  background-color: rgb(177, 218, 255);
+  color: rgb(0, 0, 0);
+  border: 3px solid rgba(255, 249, 177);
+  box-shadow: 0 0 1px rgb(251, 220, 23) inset, 0 0 3px rgb(62, 146, 69);
+}
+
+.midnightArcade .theme:hover {
+  box-shadow: 0 0 20px rgba(220, 255, 177);
+}
+
+.midnightArcade .theme:hover + .theme-hover-display {
+  color: rgb(241, 241, 241);
+  text-shadow: 0 0 6px rgba(242, 160, 35);
+}
+
+.weather-app .city-search-input {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: rgb(242, 209, 150);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border: none;
+  box-shadow: 0 0 10px rgb(231, 167, 54) inset, 0 0 8px rgb(56, 30, 14);
+  color: rgb(140, 76, 36);
+  max-height: 30px;
+  width: 75%;
+  font-size: 16px;
+  transition: all 250ms ease-in-out;
+}
+
+.city-search-input:hover {
+  box-shadow: 0 0 3px rgb(56, 30, 14) inset, 0 0 15px rgb(231, 167, 54);
+  cursor: pointer;
+}
+
+.midnightArcade .weather-app .city-search-input {
+  background-color: rgb(177, 218, 255);
+  box-shadow: 0 0 10px rgb(177, 255, 229) inset, 0 0 8px rgb(220, 255, 177);
+  color: rgb(0, 0, 0);
+}
+
+.midnightArcade .city-search-input:hover {
+  box-shadow: 0 0 3px rgb(255, 255, 255) inset, 0 0 15px rgb(220, 255, 177);
+}
+
+.weather-app .city-search-button {
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: none;
+  box-shadow: 0 0 5px rgb(56, 30, 14);
+  background-color: rgb(140, 76, 36);
+  color: rgb(242, 209, 150);
+  height: 20px;
+  width: 45%;
+  font-size: 16px;
+  transition: all 250ms ease-in-out;
+}
+
+.city-search-button:hover {
+  box-shadow: 0 0 15px rgb(56, 30, 14);
+  cursor: pointer;
+}
+
+.midnightArcade .weather-app .city-search-button {
+  box-shadow: 0 0 5px rgb(177, 218, 255);
+  background-color: rgb(220, 255, 177);
+  color: rgb(0, 0, 0);
+}
+
+.midnightArcade .city-search-button:hover {
+  box-shadow: 0 0 15px rgb(62, 146, 69);
+}
+
+main {
+  padding: 5px 0;
+  margin: 0 auto;
+}
+
+.weather-app .present-weather {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.weather-app .present-city {
+  color: rgb(56, 30, 14);
+  text-shadow: 0 0 20px rgb(231, 188, 161);
+  position: relative;
+  font-size: 22px;
+  margin: 0 auto;
+  top: -52px;
+}
+
+.midnightArcade .weather-app .present-city {
+  color: rgb(222, 177, 255);
+  text-shadow: 0 0 20px rgb(192, 26, 129);
+}
+
+.weather-app .present-city-details {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  bottom: 52px;
+}
+
+.weather-app .changeTheme {
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(156, 101, 21, 0.6) 100%
+  );
+  position: relative;
+  border: 7px solid rgba(242, 209, 150);
+  box-shadow: 0 0 3px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
+  border-radius: 180px;
+  width: 32px;
+  height: 32px;
+  font-size: 25px;
+  text-align: center;
+  transition: all 400ms ease-in-out;
+}
+
+.changeTheme:hover {
+  box-shadow: 0 0 20px rgba(231, 167, 54);
+  cursor: pointer;
+}
+
+.changeTheme:hover + .hover-display {
+  display: block;
+  color: rgb(140, 76, 36);
+  font-size: 20px;
+  text-shadow: 0 0 6px rgba(231, 167, 54);
+}
+
+.hover-display {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  left: 5px;
+  top: -45px;
+  z-index: 1;
+}
+
+.midnightArcade .weather-app .forecast {
+  background-color: rgb(192, 26, 129);
+  border: 7px solid rgb(255, 220, 177);
+  box-shadow: 0 0 1px rgb(242, 160, 35) inset, 0 0 10px rgb(62, 146, 69);
+}
+
+.midnightArcade .forecast:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(62, 146, 69);
+}
+
+.midnightArcade .changeTheme:hover + .hover-display {
+  color: rgb(240, 239, 239);
+  text-shadow: 0 0 6px rgb(242, 160, 35);
+}
+
+.weather-app .left-display-disc {
+  position: relative;
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(242, 209, 150) 100%
+  );
+  border: 7px solid rgb(242, 209, 150);
+  box-shadow: 0 0 5px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
+  border-radius: 180px;
+  width: 112px;
+  height: 112px;
+  font-size: 16px;
+  transition: all 400ms ease-in-out;
+}
+
+.left-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(231, 167, 54);
+  cursor: pointer;
+}
+
+.midnightArcade .weather-app .left-display-disc {
+  background-color: rgb(78, 156, 226);
+  border: 7px solid rgb(255, 187, 187);
+  box-shadow: 0 0 5px rgb(253, 12, 12) inset, 0 0 10px rgb(62, 146, 69);
+}
+
+.midnightArcade .left-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(62, 146, 69, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(62, 146, 69);
+}
+
+#present-date {
+  position: relative;
+  font-size: 25px;
+  bottom: -18px;
+}
+
+#present-date:hover {
+  transform: scale(1.15);
+}
+
+#present-conditions {
+  position: relative;
+  font-size: 18px;
+  bottom: -12px;
+}
+
+.weather-app .central-display-disc {
+  position: relative;
+  background-image: radial-gradient(
+    rgb(255, 255, 255, 0) 0%,
+    rgba(242, 209, 150) 100%
+  );
+  border: 7px solid rgb(242, 209, 150);
+  box-shadow: 0 0 5px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
+  border-radius: 180px;
+  background-size: contain;
+  width: 137px;
+  height: 137px;
+  bottom: 25px;
+  font-size: 20px;
+  transition: all 350ms ease-in-out;
+  z-index: 1;
+}
+
+.central-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(231, 167, 54);
+}
+
+.midnightArcade .weather-app .central-display-disc {
+  background-color: rgb(62, 146, 69);
+  border: 7px solid rgb(222, 177, 255);
+  box-shadow: 0 0 5px rgb(192, 26, 129) inset, 0 0 10px rgb(62, 146, 69);
+}
+
+.midnightArcade .central-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(62, 146, 69, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(62, 146, 69);
+}
+
+#present-temperature-value {
+  font-size: 84px;
+  transition: all 400ms ease-in-out;
+  z-index: 2;
+}
+
+#present-temperature-value:hover {
+  transform: scale(1.2);
+}
+
+#present-temperature-unit {
+  position: relative;
+  top: -6px;
+  font-size: 15px;
+  z-index: 2;
+}
+
+#present-temperature-icon {
+  position: relative;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  width: 133px;
+  max-height: 133px;
+  border-radius: 180px;
+  bottom: 59px;
+  left: 1px;
+  filter: saturate(180%);
+  z-index: -1;
+}
+
+.weather-app .right-display-disc {
+  position: relative;
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(242, 209, 150) 100%
+  );
+  border: 7px solid rgb(242, 209, 150);
+  box-shadow: 0 0 5px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
+  border-radius: 180px;
+  width: 112px;
+  height: 112px;
+  font-size: 16px;
+  transition: all 400ms ease-in-out;
+}
+
+.right-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+
+  box-shadow: 0 0 20px rgba(231, 167, 54);
+  cursor: pointer;
+}
+
+.right-display-disc .adjust {
+  position: relative;
+  top: 14px;
+  font-size: 18px;
+}
+
+.midnightArcade .weather-app .right-display-disc {
+  background-color: rgb(251, 220, 23);
+  border: 7px solid rgb(255, 187, 187);
+  box-shadow: 0 0 5px rgb(253, 12, 12) inset, 0 0 10px rgb(62, 146, 69);
+}
+
+.midnightArcade .right-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(62, 146, 69, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(62, 146, 69);
+}
+
+#present-humidity {
+  position: relative;
+  font-size: 20px;
+  top: 14px;
+}
+
+#present-humidity:hover {
+  transform: scale(1.2);
+}
+
+#present-wind {
+  position: relative;
+  font-size: 20px;
+  top: 18px;
+}
+
+#present-wind:hover {
+  transform: scale(1.2);
+}
+
+.footer-notes {
+  position: relative;
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(156, 101, 21, 0.6) 100%
+  );
+  border: 7px solid rgba(242, 209, 150);
+  box-shadow: 0 0 3px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
+  border-radius: 180px;
+  width: 32px;
+  height: 32px;
+  font-size: 25px;
+  text-align: center;
+  font-size: 25px;
+  transition: all 400ms ease-in-out;
+}
+
+.footer-notes:hover {
+  box-shadow: 0 0 20px rgba(231, 167, 54);
+  cursor: pointer;
+}
+
+.info-dropdown-content {
+  display: none;
+  position: absolute;
+  text-decoration: none;
+  text-align: left;
+  font-size: 15px;
+  right: 2px;
+  bottom: 43px;
+}
+
+.chibi-detail {
+  color: rgb(140, 76, 36);
+  text-decoration: none;
+  transition: all 200ms ease-in;
+}
+
+.midnightArcade .chibi-detail {
+  color: rgb(62, 146, 69);
+}
+
+.chibi-detail:hover {
+  background-image: radial-gradient(
+    ellipse,
+    rgba(240, 204, 151, 0.3) 0%,
+    rgba(232, 173, 89, 0.8) 80%
+  );
+  border: none;
+  box-shadow: 0 0 14px rgb(242, 209, 150);
+  border-radius: 180px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.midnightArcade .chibi-detail:hover {
+  background-image: radial-gradient(
+    ellipse,
+    rgb(177, 218, 255) 0%,
+    rgb(255, 249, 177) 80%
+  );
+  box-shadow: 0 0 14px rgb(242, 160, 35);
+}
+
+.revealFooterInfo {
+  display: block;
+}
+
+.midnightArcade .weather-app .footer-notes {
+  background-color: rgb(253, 12, 12);
+  border: 7px solid rgb(255, 220, 177);
+  box-shadow: 0 0 1px rgb(242, 160, 35) inset, 0 0 10px rgb(62, 146, 69);
+}
+
+.midnightArcade .footer-notes:hover:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(62, 146, 69);
+}
+
+.midnightArcade .footer-notes:hover + .hover-display {
+  color: rgb(240, 239, 239);
+  text-shadow: 0 0 6px rgb(242, 160, 35);
+}
+
+.present-city-forecast {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  max-width: 675px;
+  max-height: 265px;
+  padding: 5px;
+  padding-top: 0;
+  z-index: 1;
+}
+
+.forecast-display-discs {
+  display: contents;
+  position: relative;
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(242, 209, 150) 100%
+  );
+  border: 7px solid rgb(242, 209, 150);
+  box-shadow: 0 0 5px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
+  border-radius: 180px;
+  width: 140px;
+  height: 140px;
+  font-size: 16px;
+  transition: all 400ms ease-in-out;
+  z-index: 1;
+}
+
+.forecast-display-discs:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  box-shadow: 0 0 20px rgba(231, 167, 54);
+  cursor: pointer;
+}
+
+.midnightArcade .forecast-display-discs {
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border: 7px solid rgb(177, 218, 255);
+  box-shadow: 0 0 5px rgb(78, 156, 226) inset, 0 0 10px rgb(62, 146, 69);
+}
+
+.midnightArcade .forecast-display-discs:hover {
+  background-color: rgb(255, 255, 255, 0);
+  box-shadow: 0 0 20px rgba(255, 249, 177);
+}
+
+#forecast-date {
+  font-size: 20px;
+  z-index: 2;
+}
+
+#forecast-date:hover {
+  transform: scale(1.2);
+}
+
+#forecast-temperature-value {
+  font-size: 25px;
+  z-index: 2;
+}
+
+#forecast-temperature-value:hover {
+  transform: scale(1.2);
+}
+
+#forecast-temperature-icon {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 137px;
+  max-height: 137px;
+  left: -43px;
+  border-radius: 180px;
+  filter: saturate(180%);
+  z-index: -1;
+}
+
+.forecastReveal {
+  display: block;
+}
+
+.monofett-regular {
+  font-family: "Monofett", serif;
+  font-style: normal;
+}
+
+.raleway-dots-regular {
+  font-family: "Raleway Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.monsieur-la-doulaise-regular {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.major-mono-display-regular {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
