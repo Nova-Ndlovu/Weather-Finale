@@ -4,6 +4,8 @@ body {
     rgb(232, 173, 89) 0%,
     rgb(240, 204, 151, 0) 100%
   );
+  width: 99%;
+  height: 89vh;
   color: rgb(140, 76, 36);
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +23,8 @@ body {
     rgb(222, 177, 255) 83.1%
   );
   color: rgb(0, 0, 0);
-  font-family: raleway-dots-regular;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .weather-app {
@@ -144,13 +147,13 @@ main {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  bottom: 32px;
+  bottom: 38px;
 }
 
 .weather-app .changeTheme {
   background-image: radial-gradient(
     rgb(255, 255, 255) 0%,
-    rgba(156, 101, 21, 0.6) 100%
+    rgb(242, 209, 150) 100%
   );
   position: relative;
   border: 7px solid rgba(242, 209, 150);
@@ -164,6 +167,10 @@ main {
 }
 
 .changeTheme:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
   box-shadow: 0 0 20px rgba(231, 167, 54);
   cursor: pointer;
 }
@@ -186,30 +193,11 @@ main {
 
 .midnightArcade .weather-app .changeTheme {
   background-color: rgb(192, 26, 129);
-  border: 7px solid rgb(255, 220, 177);
-  box-shadow: 0 0 1px rgb(242, 160, 35) inset, 0 0 10px rgb(62, 146, 69);
+  border: 7px solid rgb(255, 249, 177);
+  box-shadow: 0 0 1px rgb(251, 220, 23) inset, 0 0 10px rgb(62, 146, 69);
 }
 
 .midnightArcade .changeTheme:hover {
-  background-image: radial-gradient(
-    rgb(231, 167, 54, 0.1) 0%,
-    rgb(255, 255, 255) 100%
-  );
-  box-shadow: 0 0 20px rgba(62, 146, 69);
-}
-
-.midnightArcade .changeTheme:hover + .hover-display {
-  color: rgb(240, 239, 239);
-  text-shadow: 0 0 6px rgb(242, 160, 35);
-}
-
-.midnightArcade .weather-app .forecast {
-  background-color: rgb(192, 26, 129);
-  border: 7px solid rgb(255, 220, 177);
-  box-shadow: 0 0 1px rgb(242, 160, 35) inset, 0 0 10px rgb(62, 146, 69);
-}
-
-.midnightArcade .forecast:hover {
   background-image: radial-gradient(
     rgb(231, 167, 54, 0.1) 0%,
     rgb(255, 255, 255) 100%
@@ -263,7 +251,7 @@ main {
 #present-date {
   position: relative;
   font-size: 25px;
-  bottom: -18px;
+  bottom: -10px;
 }
 
 #present-date:hover {
@@ -273,7 +261,7 @@ main {
 #present-conditions {
   position: relative;
   font-size: 18px;
-  bottom: -12px;
+  bottom: -2px;
 }
 
 .weather-app .central-display-disc {
@@ -304,7 +292,7 @@ main {
 }
 
 .midnightArcade .weather-app .central-display-disc {
-  background-color: rgb(62, 146, 69);
+  background-color: rgb(251, 220, 23);
   border: 7px solid rgb(222, 177, 255);
   box-shadow: 0 0 5px rgb(192, 26, 129) inset, 0 0 10px rgb(62, 146, 69);
 }
@@ -329,8 +317,8 @@ main {
 
 #present-temperature-unit {
   position: relative;
-  top: -6px;
-  font-size: 15px;
+  bottom: 20px;
+  font-size: 22px;
   z-index: 2;
 }
 
@@ -341,7 +329,7 @@ main {
   width: 133px;
   max-height: 133px;
   border-radius: 180px;
-  bottom: 59px;
+  bottom: 79px;
   left: 1px;
   filter: saturate(180%);
   z-index: -1;
@@ -374,12 +362,12 @@ main {
 
 .right-display-disc .adjust {
   position: relative;
-  top: 14px;
+  bottom: 14px;
   font-size: 18px;
 }
 
 .midnightArcade .weather-app .right-display-disc {
-  background-color: rgb(251, 220, 23);
+  background-color: rgb(78, 156, 226);
   border: 7px solid rgb(255, 187, 187);
   box-shadow: 0 0 5px rgb(253, 12, 12) inset, 0 0 10px rgb(62, 146, 69);
 }
@@ -394,8 +382,8 @@ main {
 
 #present-humidity {
   position: relative;
-  font-size: 20px;
-  top: 14px;
+  font-size: 24px;
+  top: -6px;
 }
 
 #present-humidity:hover {
@@ -404,8 +392,8 @@ main {
 
 #present-wind {
   position: relative;
-  font-size: 20px;
-  top: 18px;
+  font-size: 28px;
+  top: -12px;
 }
 
 #present-wind:hover {
@@ -416,7 +404,7 @@ main {
   position: relative;
   background-image: radial-gradient(
     rgb(255, 255, 255) 0%,
-    rgba(156, 101, 21, 0.6) 100%
+    rgba(242, 209, 150) 100%
   );
   border: 7px solid rgba(242, 209, 150);
   box-shadow: 0 0 3px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
@@ -430,6 +418,10 @@ main {
 }
 
 .footer-notes:hover {
+  background-image: radial-gradient(
+    rgb(231, 167, 54, 0.1) 0%,
+    rgb(255, 255, 255) 100%
+  );
   box-shadow: 0 0 20px rgba(231, 167, 54);
   cursor: pointer;
 }
@@ -482,8 +474,8 @@ main {
 
 .midnightArcade .weather-app .footer-notes {
   background-color: rgb(253, 12, 12);
-  border: 7px solid rgb(255, 220, 177);
-  box-shadow: 0 0 1px rgb(242, 160, 35) inset, 0 0 10px rgb(62, 146, 69);
+  border: 7px solid rgb(255, 249, 177);
+  box-shadow: 0 0 1px rgb(251, 220, 23) inset, 0 0 10px rgb(62, 146, 69);
 }
 
 .midnightArcade .footer-notes:hover:hover {
@@ -513,7 +505,7 @@ main {
 .forecast-display-discs {
   display: contents;
   position: relative;
-  background: transparent;
+  background: none;
   border: 7px solid rgb(242, 209, 150);
   box-shadow: 0 0 5px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
   border-radius: 180px;
@@ -522,6 +514,8 @@ main {
   font-size: 16px;
   transition: all 400ms ease-in-out;
   z-index: 1;
+  overflow: hidden;
+  mix-blend-mode: hue;
 }
 
 .forecast-display-discs:hover {
