@@ -515,7 +515,6 @@ main {
   transition: all 400ms ease-in-out;
   z-index: 1;
   overflow: hidden;
-  mix-blend-mode: hue;
 }
 
 .forecast-display-discs:hover {
@@ -565,10 +564,6 @@ main {
   border-radius: 180px;
   filter: saturate(180%);
   z-index: -1;
-}
-
-.forecastReveal {
-  display: block;
 }
 
 .monofett-regular {
