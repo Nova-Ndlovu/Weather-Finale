@@ -105,12 +105,7 @@ function revealMenu() {
 
 function midnightArcadeTheme() {
   let body = document.querySelector("body");
-  let headingFont = document.querySelector(".monsieur-la-doulaise-regular");
-  let subHeadingFont = document.querySelector(".parisienne-regular");
-
   body.classList.toggle("midnightArcade");
-  headingFont.classList.toggle("major-mono-display-regular");
-  subHeadingFont.classList.toggle("raleway-dots-regular");
 }
 
 let searchFormElement = document.querySelector("#city-search");

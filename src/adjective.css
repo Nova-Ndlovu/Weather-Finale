@@ -35,6 +35,7 @@ body {
   border-top-color: rgb(231, 188, 161);
   border: 12px solid rgb(255, 255, 255);
   border-radius: 180px;
+  font-family: "Parisienne", cursive;
   max-width: 675px;
   max-height: 265px;
   margin: 60px auto;
@@ -47,8 +48,9 @@ body {
 .midnightArcade .weather-app {
   background-color: rgb(230, 230, 230);
   border: 12px solid rgb(230, 230, 230);
-  box-shadow: 0 0 10px 8px rgba(220, 255, 177) inset,
-    0 8px 30px rgba(251, 220, 23);
+  box-shadow: 0 0 10px 8px rgb(220, 255, 177) inset,
+    0 8px 30px rgb(251, 220, 23);
+  font-family: "Raleway Dots", sans-serif;
 }
 
 header {
@@ -69,7 +71,8 @@ header {
   color: rgb(140, 76, 36);
   max-height: 30px;
   width: 75%;
-  font-size: 16px;
+  font-family: "Parisienne", cursive;
+  font-size: 20px;
   transition: all 250ms ease-in-out;
 }
 
@@ -82,6 +85,8 @@ header {
   background-color: rgb(177, 218, 255);
   box-shadow: 0 0 10px rgb(177, 255, 229) inset, 0 0 8px rgb(220, 255, 177);
   color: rgb(0, 0, 0);
+  font-family: "Raleway Dots", sans-serif;
+  font-size: 20px;
 }
 
 .midnightArcade .city-search-input:hover {
@@ -97,7 +102,8 @@ header {
   color: rgb(242, 209, 150);
   height: 20px;
   width: 45%;
-  font-size: 16px;
+  font-family: "Parisienne", cursive;
+  font-size: 20px;
   transition: all 250ms ease-in-out;
 }
 
@@ -110,10 +116,12 @@ header {
   box-shadow: 0 0 5px rgb(177, 218, 255);
   background-color: rgb(220, 255, 177);
   color: rgb(0, 0, 0);
+  font-family: "Raleway Dots", sans-serif;
+  font-size: 20px;
 }
 
 .midnightArcade .city-search-button:hover {
-  box-shadow: 0 0 15px rgb(62, 146, 69);
+  box-shadow: 0 0 15px rgb(220, 255, 177);
 }
 
 main {
@@ -130,24 +138,35 @@ main {
 }
 
 .weather-app .present-city {
+  position: relative;
   color: rgb(56, 30, 14);
   text-shadow: 0 0 20px rgb(231, 188, 161);
-  position: relative;
   font-size: 22px;
+  font-family: "Monsieur La Doulaise", cursive;
   margin: 0 auto;
   top: -32px;
 }
 
 .midnightArcade .weather-app .present-city {
-  color: rgb(222, 177, 255);
+  position: relative;
+  color: rgb(255, 249, 177);
+  font-family: "Major Mono Display", monospace;
   text-shadow: 0 0 20px rgb(192, 26, 129);
+  top: -22px;
 }
 
 .weather-app .present-city-details {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  bottom: 38px;
+  bottom: 44px;
+}
+
+.midnightArcade .weather-app .present-city-details {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  bottom: 16px;
 }
 
 .weather-app .changeTheme {
@@ -156,12 +175,14 @@ main {
     rgb(242, 209, 150) 100%
   );
   position: relative;
-  border: 7px solid rgba(242, 209, 150);
+  border: 7px solid rgb(242, 209, 150);
   box-shadow: 0 0 3px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
   border-radius: 180px;
   width: 32px;
   height: 32px;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Monsieur La Doulaise", cursive;
   text-align: center;
   transition: all 400ms ease-in-out;
 }
@@ -171,7 +192,7 @@ main {
     rgb(231, 167, 54, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgba(231, 167, 54);
+  box-shadow: 0 0 20px rgb(231, 167, 54);
   cursor: pointer;
 }
 
@@ -179,7 +200,7 @@ main {
   display: block;
   color: rgb(140, 76, 36);
   font-size: 20px;
-  text-shadow: 0 0 6px rgba(231, 167, 54);
+  text-shadow: 0 0 6px rgb(231, 167, 54);
 }
 
 .hover-display {
@@ -194,7 +215,8 @@ main {
 .midnightArcade .weather-app .changeTheme {
   background-color: rgb(192, 26, 129);
   border: 7px solid rgb(255, 249, 177);
-  box-shadow: 0 0 1px rgb(251, 220, 23) inset, 0 0 10px rgb(62, 146, 69);
+  box-shadow: 0 0 1px rgb(251, 220, 23) inset, 0 0 10px rgb(192, 26, 129);
+  font-family: "Major Mono Display", monospace;
 }
 
 .midnightArcade .changeTheme:hover {
@@ -202,7 +224,7 @@ main {
     rgb(231, 167, 54, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgba(62, 146, 69);
+  box-shadow: 0 0 20px rgb(220, 255, 177);
 }
 
 .midnightArcade .changeTheme:hover + .hover-display {
@@ -230,14 +252,14 @@ main {
     rgb(231, 167, 54, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgba(231, 167, 54);
+  box-shadow: 0 0 20px rgb(231, 167, 54);
   cursor: pointer;
 }
 
 .midnightArcade .weather-app .left-display-disc {
-  background-color: rgb(78, 156, 226);
-  border: 7px solid rgb(255, 187, 187);
-  box-shadow: 0 0 5px rgb(253, 12, 12) inset, 0 0 10px rgb(62, 146, 69);
+  background-color: rgb(177, 218, 255);
+  border: 7px solid rgb(255, 220, 177);
+  box-shadow: 0 0 5px rgb(253, 12, 12) inset, 0 0 10px rgb(192, 26, 129);
 }
 
 .midnightArcade .left-display-disc:hover {
@@ -245,23 +267,37 @@ main {
     rgb(62, 146, 69, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgba(62, 146, 69);
+  box-shadow: 0 0 20px rgb(220, 255, 177);
 }
 
 #present-date {
   position: relative;
-  font-size: 25px;
+  font-size: 28px;
+  font-family: "Parisienne", cursive;
   bottom: -10px;
 }
 
+.midnightArcade #present-date {
+  font-family: "Major Mono Display", monospace;
+  font-size: 20px;
+  bottom: -30px;
+}
+
 #present-date:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 #present-conditions {
   position: relative;
+  font-family: "Parisienne", cursive;
   font-size: 18px;
-  bottom: -2px;
+  bottom: 4px;
+}
+
+.midnightArcade #present-conditions {
+  font-size: 14px;
+  font-family: "Major Mono Display", monospace;
+  bottom: -28px;
 }
 
 .weather-app .central-display-disc {
@@ -288,13 +324,16 @@ main {
     rgb(231, 167, 54, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgba(231, 167, 54);
+  box-shadow: 0 0 20px rgb(231, 167, 54);
 }
 
 .midnightArcade .weather-app .central-display-disc {
-  background-color: rgb(251, 220, 23);
-  border: 7px solid rgb(222, 177, 255);
-  box-shadow: 0 0 5px rgb(192, 26, 129) inset, 0 0 10px rgb(62, 146, 69);
+  background-image: radial-gradient(
+    rgb(255, 255, 255, 0) 0%,
+    rgba(255, 249, 177) 100%
+  );
+  border: 7px solid rgb(255, 249, 177);
+  box-shadow: 0 0 5px rgb(192, 26, 129) inset, 0 0 10px rgb(192, 26, 129);
 }
 
 .midnightArcade .central-display-disc:hover {
@@ -302,13 +341,20 @@ main {
     rgb(62, 146, 69, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgba(62, 146, 69);
+  box-shadow: 0 0 20px rgb(220, 255, 177);
 }
 
 #present-temperature-value {
   font-size: 84px;
+  font-family: "Monsieur La Doulaise", cursive;
   transition: all 400ms ease-in-out;
   z-index: 2;
+}
+
+.midnightArcade #present-temperature-value {
+  position: relative;
+  bottom: -20px;
+  font-family: "Major Mono Display", monospace;
 }
 
 #present-temperature-value:hover {
@@ -319,27 +365,39 @@ main {
   position: relative;
   bottom: 20px;
   font-size: 22px;
+  font-family: "Parisienne", cursive;
   z-index: 2;
+}
+
+.midnightArcade #present-temperature-unit {
+  position: relative;
+  bottom: -16px;
+  font-family: "Raleway Dots", sans-serif;
 }
 
 #present-temperature-icon {
   position: relative;
   justify-content: center;
   background-color: rgb(255, 255, 255);
-  width: 133px;
-  max-height: 133px;
+  width: 137px;
+  max-height: 136px;
   border-radius: 180px;
   bottom: 79px;
-  left: 1px;
+  left: 0;
   filter: saturate(180%);
   z-index: -1;
+}
+
+.midnightArcade #present-temperature-icon {
+  position: relative;
+  bottom: 55px;
 }
 
 .weather-app .right-display-disc {
   position: relative;
   background-image: radial-gradient(
     rgb(255, 255, 255) 0%,
-    rgba(242, 209, 150) 100%
+    rgb(242, 209, 150) 100%
   );
   border: 7px solid rgb(242, 209, 150);
   box-shadow: 0 0 5px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
@@ -355,21 +413,25 @@ main {
     rgb(231, 167, 54, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-
-  box-shadow: 0 0 20px rgba(231, 167, 54);
+  box-shadow: 0 0 20px rgb(231, 167, 54);
   cursor: pointer;
 }
 
 .right-display-disc .adjust {
   position: relative;
-  bottom: 14px;
+  bottom: 28px;
   font-size: 18px;
 }
 
+.midnightArcade .right-display-disc .adjust {
+  position: relative;
+  bottom: 2px;
+}
+
 .midnightArcade .weather-app .right-display-disc {
-  background-color: rgb(78, 156, 226);
-  border: 7px solid rgb(255, 187, 187);
-  box-shadow: 0 0 5px rgb(253, 12, 12) inset, 0 0 10px rgb(62, 146, 69);
+  background-color: rgb(177, 218, 255);
+  border: 7px solid rgb(255, 220, 177);
+  box-shadow: 0 0 5px rgb(253, 12, 12) inset, 0 0 10px rgb(192, 26, 129);
 }
 
 .midnightArcade .right-display-disc:hover {
@@ -377,13 +439,21 @@ main {
     rgb(62, 146, 69, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgba(62, 146, 69);
+  box-shadow: 0 0 20px rgb(220, 255, 177);
 }
 
 #present-humidity {
   position: relative;
-  font-size: 24px;
+  font-size: 30px;
+  font-family: "Monsieur La Doulaise", cursive;
   top: -6px;
+}
+
+.midnightArcade #present-humidity {
+  position: relative;
+  font-size: 26px;
+  font-family: "Major Mono Display", monospace;
+  top: 6px;
 }
 
 #present-humidity:hover {
@@ -392,8 +462,16 @@ main {
 
 #present-wind {
   position: relative;
-  font-size: 28px;
-  top: -12px;
+  font-size: 30px;
+  font-family: "Monsieur La Doulaise", cursive;
+  top: -20px;
+}
+
+.midnightArcade #present-wind {
+  position: relative;
+  font-size: 20px;
+  font-family: "Major Mono Display", monospace;
+  top: 4px;
 }
 
 #present-wind:hover {
@@ -404,14 +482,16 @@ main {
   position: relative;
   background-image: radial-gradient(
     rgb(255, 255, 255) 0%,
-    rgba(242, 209, 150) 100%
+    rgb(242, 209, 150) 100%
   );
-  border: 7px solid rgba(242, 209, 150);
+  border: 7px solid rgb(242, 209, 150);
   box-shadow: 0 0 3px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
   border-radius: 180px;
   width: 32px;
   height: 32px;
   font-size: 25px;
+  font-weight: 600;
+  font-family: "Monsieur La Doulaise", cursive;
   text-align: center;
   font-size: 25px;
   transition: all 400ms ease-in-out;
@@ -438,12 +518,14 @@ main {
 
 .chibi-detail {
   color: rgb(140, 76, 36);
+  font-family: "Parisienne", cursive;
   text-decoration: none;
   transition: all 200ms ease-in;
 }
 
 .midnightArcade .chibi-detail {
   color: rgb(62, 146, 69);
+  font-family: "Raleway Dots", sans-serif;
 }
 
 .chibi-detail:hover {
@@ -473,17 +555,18 @@ main {
 }
 
 .midnightArcade .weather-app .footer-notes {
-  background-color: rgb(253, 12, 12);
+  background-color: rgba(253, 12, 12, 0.8);
   border: 7px solid rgb(255, 249, 177);
-  box-shadow: 0 0 1px rgb(251, 220, 23) inset, 0 0 10px rgb(62, 146, 69);
+  box-shadow: 0 0 1px rgb(251, 220, 23) inset, 0 0 10px rgb(192, 26, 129);
+  font-family: "Major Mono Display", monospace;
 }
 
-.midnightArcade .footer-notes:hover:hover {
+.midnightArcade .footer-notes:hover {
   background-image: radial-gradient(
     rgb(231, 167, 54, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgba(62, 146, 69);
+  box-shadow: 0 0 20px rgb(220, 255, 177);
 }
 
 .midnightArcade .footer-notes:hover + .hover-display {
@@ -492,26 +575,28 @@ main {
 }
 
 .present-city-forecast {
-  display: flex;
+  display: contents;
   position: relative;
   justify-content: space-evenly;
-  max-width: 675px;
-  max-height: 265px;
+  width: 100%;
+  height: fit-content;
   padding: 5px;
   padding-top: 0;
+  margin: 0 auto;
   z-index: 1;
 }
 
-.forecast-display-discs {
-  display: contents;
+.present-city-forecast .forecast-display-discs {
+  display: flex;
   position: relative;
-  background: none;
+  background: rgb(255, 255, 255);
   border: 7px solid rgb(242, 209, 150);
   box-shadow: 0 0 5px rgb(231, 167, 54) inset, 0 0 10px rgb(56, 30, 14);
   border-radius: 180px;
-  width: 140px;
-  height: 140px;
+  width: 65%;
+  height: 26vh;
   font-size: 16px;
+  font-family: "Parisienne", cursive;
   transition: all 400ms ease-in-out;
   z-index: 1;
   overflow: hidden;
@@ -519,7 +604,7 @@ main {
 
 .forecast-display-discs:hover {
   background: transparent;
-  box-shadow: 0 0 20px rgba(231, 167, 54);
+  box-shadow: 0 0 20px rgb(231, 167, 54);
   cursor: pointer;
 }
 
@@ -528,44 +613,66 @@ main {
     rgb(255, 255, 255) 0%,
     rgba(255, 255, 255, 0.1) 100%
   );
-  border: 7px solid rgb(177, 218, 255);
-  box-shadow: 0 0 5px rgb(78, 156, 226) inset, 0 0 10px rgb(62, 146, 69);
+  background-color: rgb(230, 230, 230);
+  border: 7px solid rgb(230, 230, 230);
+  box-shadow: 0 0 5px 4px rgb(220, 255, 177) inset, 0 4px 15px rgb(251, 220, 23);
+  font-family: "Raleway Dots", sans-serif;
 }
 
 .midnightArcade .forecast-display-discs:hover {
   background-color: rgb(255, 255, 255, 0);
-  box-shadow: 0 0 20px rgba(255, 249, 177);
+  box-shadow: 0 0 20px rgb(255, 249, 177);
 }
 
 #forecast-date {
-  font-size: 20px;
+  position: relative;
+  left: 60px;
+  bottom: 0;
+  font-size: 25px;
+  font-family: "Parisienne", cursive;
   z-index: 2;
 }
 
-#forecast-date:hover {
-  transform: scale(1.2);
+.midnightArcade #forecast-date {
+  font-family: "Major Mono Display", monospace;
 }
 
 #forecast-temperature-value {
-  font-size: 25px;
+  position: relative;
+  left: 20px;
+  bottom: -28px;
+  font-size: 30px;
+  font-family: "Monsieur La Doulaise", cursive;
   z-index: 2;
 }
 
+.midnightArcade #forecast-temperature-value {
+  left: -20px;
+  bottom: -28px;
+  font-family: "Major Mono Display", monospace;
+}
+
 #forecast-temperature-value:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #forecast-temperature-icon {
   position: relative;
+  justify-content: center;
   background-color: rgb(255, 255, 255);
-  width: 137px;
-  max-height: 137px;
-  left: -43px;
+  width: 156px;
+  max-height: 157px;
+  right: 50px;
+  bottom: -2px;
   border-radius: 180px;
   filter: saturate(180%);
   z-index: -1;
 }
 
+.midnightArcade #forecast-temperature-icon {
+  right: 72px;
+  bottom: -2px;
+}
 .monofett-regular {
   font-family: "Monofett", serif;
   font-style: normal;
